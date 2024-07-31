@@ -8,8 +8,8 @@ import (
 	"os"
 )
 
-func ProcessStorage(s Storage) error {
-	s.Save("test", []byte("Here is a string...."))
+func ProcessData(backend Backend) error {
+	backend.Save("test", []byte("Here is a string...."))
 	return nil
 }
 
@@ -22,7 +22,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	var backend Storage
+	var backend Backend
 
 	switch *storageFlag {
 	case "file":
@@ -34,5 +34,5 @@ func main() {
 		os.Exit(1)
 	}
 
-	ProcessStorage(backend)
+	ProcessData(backend)
 }

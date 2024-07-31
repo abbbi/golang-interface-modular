@@ -1,5 +1,5 @@
 package main
 
-type Storage interface {
+type Backend interface {
 	Save(filename string, data []byte) error
 }

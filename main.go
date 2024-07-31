@@ -14,7 +14,7 @@ func ProcessStorage(s Storage) error {
 }
 
 func main() {
-	storageFlag := flag.String("backend", "file", "Storage backend to use: default: file")
+	storageFlag := flag.String("backend", "file", "Storage backend to use")
 
 	flag.Parse()
 	if *storageFlag == "" {
